@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<% content_for :title do %>
+Done | 一覧
+<% end %>
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="users.scss" type="text/css">
+
+</head>
+
+<body>
+<%= render "shared/header2" %>
+  <div class="height">
+    <% if flash[:notice]%>
+      <div>
+        <%= flash[:notice]%>
+      </div>
+    <% end %>
+      <% @user.each do |user| %>
+        <div class="blog1">
+          <h3><%= user.title %></h3>
+          <p><%= link_to(user.created_at.in_time_zone('Tokyo'),"/posts/#{user.id}")%></p>
+        </div>
+      <% end %>
+    <%= paginate @user %>
+  </div>  
+<%= render "shared/footer" %>
+</body>

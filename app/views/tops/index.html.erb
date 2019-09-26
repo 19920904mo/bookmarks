@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<% content_for :title do %>
+Done | TOP
+<% end %>
+<meta charset= "utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="top.scss" type="text/css">
+
+</head>
+
+<body>
+  <% if user_signed_in? %>
+  <%= render "shared/header" %>
+    <div>
+      <section class="header">
+        <p class="site-title-sub">----- Web application for bookmarks -----</p>
+          <h1 class="site-title">積み上げを一元管理</h1>
+            <p class="site-description">何を何でググったか見返せる。</p>
+        <div class="buttons">
+          <a class="button button-orange" href="/users/<%= current_user.id %>">READ / LEARN</a>
+          <a class="button button" href="posts/message">SEND MESSAGE</a>
+        </div>
+      </section>
+    </div>
+  <% else %>
+    <%= render "shared/header" %>
+    <div>
+      <section class="header">
+        <p class="site-title-sub">----- Web application for bookmarks -----</p>
+          <h1 class="site-title">積み上げを一元管理</h1>
+            <p class="site-description">何を何でググったか見返せる。</p>
+        <div class="buttons">
+          <a class="button button-orange" href="posts/index">READ / LEARN</a>
+          <a class="button button" href="posts/message">SEND MESSAGE</a>
+        </div>
+      </section>
+    </div>
+  <% end %>
+  <footer>
+    <div class="box9">
+      <div class="copyright">
+        <div class="push"></div>
+          <p>Copyright &copy; 2019 Masato Okawa</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

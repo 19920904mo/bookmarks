@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<% content_for :title do %>
+Done | 新規投稿
+<% end %>
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="posts.scss" type="text/css">
+
+</head>
+
+<body>
+  <%= render "shared/header1" %>
+  <div class>
+    <%= form_tag("/posts/create") do%>
+    <div>
+      <h3>タイトル</h3>
+      <textarea name ="title" placeholder="ex.~について" rows="2" cols="50" autofocus></textarea>
+    </div>
+    <div>
+      <h3>URL</h3>
+      <textarea name ="url" placeholder="https://~~" rows="2" cols="50"></textarea>
+    </div>
+    <div>
+      <h3>内容</h3>
+      <textarea name ="content" placeholder="一言コメント" rows="5" cols="50"></textarea>
+    </div>
+    <div>
+      <h3>画像</h3>
+      <input type="file" name="image">
+    </div>
+    <div class="pictures_row">
+      <input type="submit" value="投稿">
+    <% end %>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
+</body>

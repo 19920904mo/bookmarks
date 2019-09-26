@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<% content_for :title do %>
+Done | 一覧
+<% end %>
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="users.scss" type="text/css">
+
+</head>
+
+<body>
+  <%= render "shared/header1" %>
+  <div>
+  <%= "ユーザーID: #{@user.id}" %>
+  </div>
+  <div>
+  <%= "ニックネーム: #{@user.nickname}" %>
+  </div>
+  <%= render "shared/footer" %>
+</body>

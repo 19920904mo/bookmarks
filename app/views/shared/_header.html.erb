@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+    <header>
+      <div class="boxA">
+        <div class="box1">
+            <div class="site">
+                <h1>Done!!</h1>
+            </div>
+        </div>
+        <div class="box2">
+            <nav class="menu">
+            <ul>
+            <li><%= link_to "ようこそ、#{current_user.nickname}さん", "/users/#{current_user.id}/show" %></li>
+            <li><%= link_to "新規投稿", "/posts/new" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+            </nav>
+        </div>
+      </div>
+    </header>
+    <% else %>
+    <header>
+      <div class="boxA">
+        <div class="box1">
+            <div class="site">
+                <h1>Done!!</h1>
+            </div>
+        </div>
+    
+        <div class="box2">
+            <nav class="menu">
+            <ul>
+            <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+            <li><%= link_to "登録", new_user_registration_path, class: 'post' %></li>
+            </ul>
+            </nav>
+        </div>
+      </div>
+    <% end %>
+    </header>

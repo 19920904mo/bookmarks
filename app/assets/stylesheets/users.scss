@@ -1,0 +1,29 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  
+}
+
+
+@media only screen and (max-width: 767px){
+.height { 
+  width: 100%;
+  //height: auto;
+  padding: 50px 30px 80px;
+  height: 170vh;
+  background-color: azure
+}
+}
+
+/* pc　768px以上 */
+@media only screen and (min-width: 768px), print {
+  .height{
+    
+    width: auto;
+    height: auto;
+    padding: 5px 30px 80px;
+    height: 100vh;
+    background-color: azure
+  }
+}

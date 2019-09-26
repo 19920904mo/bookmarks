@@ -1,0 +1,87 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  
+}
+
+
+@media only screen and (max-width: 767px){
+.height { 
+  width: 100%;
+  //height: auto;
+  padding: 50px 30px 80px;
+  height: 170vh;
+    
+}
+}
+
+/* pc　768px以上 */
+@media only screen and (min-width: 768px), print {
+  .height{
+    
+    width: auto;
+    height: auto;
+    padding: 5px 30px 80px;
+    height: 100vh;
+    
+  }
+}
+
+
+.blog1{
+        text-align:center;
+        display: inline-block;
+        padding: 15px;
+        width: 50%;
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        color: #5d627b;
+        background: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.blog1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+// .like-btnのcolorを「#8899a6」にしてください
+.like-btn{
+  color: #8899a6;
+}
+
+
+// .like-btn-unlikeのcolorを「#ff2581」にしてください
+.like-btn-unlike{
+  color:#ff2581;
+}
+
+.posts-show-item .fa {
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+.buttonb {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #4169e1;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.heght{
+   padding: 20px;
+   margin: 10px;
+}
+
+.pictures_row {
+  padding: 35px;
+   width: 100%
+}
+

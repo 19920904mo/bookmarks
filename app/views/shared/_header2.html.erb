@@ -1,0 +1,20 @@
+<div class="boxA">
+        <div class="box1">
+            <div class="site">
+                <h1><a href="javascript:history.back()">Done!!</a></h1>
+            </div>
+        </div>
+    
+        <div class="box2">
+            <nav class="menu">
+            <ul>
+            <% if user_signed_in? %>
+            <li><%= link_to "ユーザー：#{current_user.nickname}", "/users/#{current_user.id}/show" %></li>
+            <li><%= link_to "みんなの投稿", "/posts/index" %></li>
+            <% end %>
+            <li><%= link_to "新規投稿", "/posts/new" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+            </nav>
+        </div>
+    </div>

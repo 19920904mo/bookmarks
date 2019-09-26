@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<% content_for :title do %>
+Done | 編集
+<% end %>
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="posts.scss" type="text/css">
+
+</head>
+
+<body>
+  <%= render "shared/header1" %>
+  <div>
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+      <% @post.errors.full_messages.each do |message| %>
+        <div>
+          <%= message %>
+        </div>
+      <% end %>
+    <div>
+      <textarea name="title"><%= @post.title %></textarea>
+    </div>
+      <textarea name="content"><%= @post.content %></textarea>
+  </div>
+  <div>
+      <input type="submit" value="保存">
+    <% end %>
+  </div>
+  <%= render "shared/footer" %>
+</body>

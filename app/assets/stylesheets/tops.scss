@@ -1,0 +1,265 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+
+body, html {height: 100%;
+  background-color: white;
+  font-family: 'arial black',
+      'Hiragino Kaku Gothic Pro', arial black
+}
+h1, h2, h3, h4, h5, h6, p, body {
+  line-height: 1.77;
+  font-size: 18px;
+  color: #000000;
+  font-family: arial black;
+  margin: 0;
+  padding: 0;
+}
+/* サイト名*/
+.site h1 a {color: #000000;
+            text-decoration: none}
+.site h1 {margin: 0;
+            font-size:40px}
+/* ナビゲーション*/
+.menu ul {margin:0;
+          padding: 0;
+          list-style: none}
+          
+.menu li a {display:block;
+            padding: 25px 25px;
+            color: #000000;
+            font-size:14px;
+            text-decoration: none}
+
+.menu li a:hover {background-color:#eeeeee}
+
+.menu ul after {content: "";
+                display:block;
+                clear:both}
+                
+.menu li {float:left;
+          width: auto}
+
+
+
+.subtitle {padding: 40px;              /* 余白指定 */
+            text-align:  center;        /* 中央寄せ */
+            height: 30px }            /* 高さ指定 */
+
+.button a {padding: 10px 15px;
+           height: 40px}
+
+.button1 a {padding: 10px 15px;
+           height: 25px}
+           
+.btn-circle-border-simple {display: inline-block;
+    width: 125px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #4169e1;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+
+
+.button :hover {
+  background-color: #31c8aa;
+  box-shadow: 0 3px 0 #23a188;
+}
+
+.button :active {
+  top: 3px;
+  box-shadow: none;
+}
+
+.button1 :hover {
+  background-color: #31c8aa;
+  box-shadow: 0 3px 0 #23a188;
+}
+
+.button1 :active {
+  top: 3px;
+  box-shadow: none;
+}
+
+/* コピーライト*/
+.copyright p {
+            　margin: 0;
+              color:#666666;
+              font-size:12px;
+              bottom: 0;
+              padding-top: 10px;
+              padding-bottom: 10px
+}
+/* box9をバーの形にする*/
+.box9 {   bottom:0;
+           width: 100%;
+           position: fixed;
+        background-color: #c0c0c0}
+
+.box10  {
+             padding: 15px;
+              width: 100%} 
+.box11  {
+             padding: 15px;
+              width: 100%} 
+/* 全体の横幅を固定 */
+.box10, .box11
+	{width: 1000px;
+	margin-left: auto;
+	margin-right: auto}
+	
+input[type=submit] {display: inline-block;
+    width: 125px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #4169e1;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+
+input[type=submit]:hover {
+  background-color: #31c8aa;
+  box-shadow: 0 3px 0 #23a188;
+}
+
+input[type=submit]:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+
+
+/* BOX1とBOX2を横に並べる設定*/
+.boxA:after {content: "";
+             height: 0.3vh;
+              display:block;
+              clear: both;}
+
+
+
+.box1       {float:left;
+              width: auto}
+              
+.box2       {float:right;
+              width: auto;} 
+
+.box3       {width: auto} 
+
+.box4       {text-align:  center;
+            padding: 15px;
+              width: 100%}
+              
+.box5       {text-align:  center;
+             padding: 15px;
+             width: 100%} 
+              
+.box6       {text-align:  center;
+             padding: 15px;
+              width: 100%} 
+
+.box8       {text-align:  center;
+            padding: 11px;
+              width: 100%;
+              padding-bottom: 35px}
+              
+.contents_row {text-align:  center;
+             padding: 15px;
+              width: 100%
+}
+
+.contents {
+  width: auto;
+  margin: 0 auto;
+}
+
+/* BOX Aの下に罫線を挿入*/
+.boxA {margin-bottom: 0px;
+      border-bottom: solid 1px #dddddd;
+      padding-left: 15px;
+      color: #fff;
+      padding-right: 15px}
+      
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    text-align: center;
+    font-size: 0.8rem;
+   
+}
+
+
+
+@media only screen and (max-width: 767px){
+.header { 
+  background: linear-gradient(90deg, rgba(22, 135, 237, 0.6), rgba(20, 55, 90, 0.9)) ,url('student.jpg');
+  width: 100%;
+  height: auto;
+  padding: 50px 30px 80px;
+    height: 170vh;
+    background-size: cover;
+}
+}
+
+/* pc　768px以上 */
+@media only screen and (min-width: 768px), print {
+  .header{
+    background: linear-gradient(90deg, rgba(22, 135, 237, 0.6), rgba(20, 55, 90, 0.9)) ,url('student.jpg');
+    width: auto;
+    height: auto;
+    padding: 50px 30px 80px;
+    height: 95vh;
+    background-size: cover;
+  }
+}
+.site-title-sub {
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+   color: #fff;
+}
+
+.site-title {
+    margin: 50px;
+    color: #fff;
+    font-size: 4.5rem;
+    
+}
+
+.site-description {
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #afa58d;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button-orange {
+    background-color: #f1b400;
+}
