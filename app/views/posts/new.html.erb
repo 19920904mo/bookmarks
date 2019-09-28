@@ -13,7 +13,7 @@ Done | 新規投稿
 <body>
   <%= render "shared/header1" %>
   <div class>
-    <%= form_tag("/posts/create") do%>
+    <%= form_tag("/posts/create",method: :post,multipart: true) do%>
     <div>
       <h3>タイトル</h3>
       <textarea name ="title" placeholder="ex.~について" rows="2" cols="50" autofocus></textarea>

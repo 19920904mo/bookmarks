@@ -26,7 +26,7 @@ Done | 一覧
     <%= @post.content %>
   </div>
   <div>
-    <%= @post.image %>
+    <img src="<%= "#{@post.image}" %>"width="650px">
   </div>
   <% if user_signed_in? %>
   <% if Like.find_by(user_id: @user_id, post_id: @post.id) %>
@@ -41,8 +41,12 @@ Done | 一覧
     <%= @likes_count %>
     <% if current_user.id == @post.user_id %>
     <div>
-      <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-      <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      <%= link_to("/posts/#{@post.id}/edit") do %>
+        <i class="fa fa-arrow-right"></i> 編集
+      <% end %>
+      <%= link_to("/posts/#{@post.id}/destroy", method: :post, data: { confirm: '削除しますか？' }) do %>
+        <i class="fa fa-arrow-right"></i> 削除
+      <% end %>
     </div>
     <% end %>
   <% end %>
