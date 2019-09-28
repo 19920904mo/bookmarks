@@ -20,9 +20,11 @@ Done | 編集
         </div>
       <% end %>
     <div>
-      <textarea name="title"><%= @post.title %></textarea>
+      <h3>タイトル</h3>
+      <textarea name="title" rows="2" cols="50" autofocus><%= @post.title %></textarea>
     </div>
-      <textarea name="content"><%= @post.content %></textarea>
+      <h3>内容</h3>
+      <textarea name="content" rows="5" cols="50"><%= @post.content %></textarea>
   </div>
   <div>
       <input type="submit" value="保存">

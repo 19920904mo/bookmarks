@@ -20,7 +20,9 @@ Done | 一覧
     <%= @post.title %>
   </div>
    <div>
-    <%= @post.url %>
+    <%= link_to "#{@post.url}" ,:target=>["_blank"] do %>
+      <i class="fa fa-external-link"></i> 参照サイト
+    <% end %>
   </div>
   <div>
     <%= @post.content %>
